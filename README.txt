@@ -2,8 +2,8 @@ What dose this app do ?
 
 This is a birthday reminder.
  If you want to get remind messages not to forget birthdays of people you love,
-this app is the perfect for you.
-when any birthday you registerd is within a week, it will send you a remind massage.
+this app is perfect for you.
+when any birthday you registered is within a week, it will send you a remind massage.
 
 
 
