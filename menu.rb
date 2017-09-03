@@ -62,7 +62,7 @@ new_account.mail_address = prompt.ask('What is your email address?') do |q|
 q.validate(/\A\w+@\w+\.\w+\Z/)
 q.messages[:valid?] = 'Invalid email address'
                                                              end #ask end
-new_account.date_of_birth = prompt.ask('What is your Birth day (YYYY-DD-MM)?')  do |q|
+new_account.date_of_birth = prompt.ask('What is your Birth day (YYYY-MM-DD)?')  do |q|
 q.validate (/\A\d{4}\-(0?[1-9]|1[0-2])\-(0?[1-9]|1[0-9]|2[0-9]|3[0-1])\z/)
 q.messages[:valid?] = 'Invalid date'
                                 end #mask end
@@ -166,7 +166,7 @@ def add_person_you_love(account)
   new_person.first_name = prompt.ask('What is the person\'s first name?'){|q| q.modify :capitalize}
   new_person.last_name = prompt.ask('What is the person\'s last name?'){|q| q.modify :capitalize}
   new_person.relationship = prompt.ask('What is the relation between you and the person?'){|q| q.modify :capitalize}
-  new_person.date_of_birth = prompt.ask('What is the person\'s Birth day (YYYY-DD-MM)?')  do |q|
+  new_person.date_of_birth = prompt.ask('What is the person\'s Birth day (YYYY-MM-DD)?')  do |q|
   q.validate (/\A\d{4}\-(0?[1-9]|1[0-2])\-(0?[1-9]|1[0-9]|2[0-9]|3[0-1])\z/)
   q.messages[:valid?] = 'Invalid date'
                                   end #ask end
@@ -286,12 +286,12 @@ def find_birthday(account)
   end # each end
     if birthdays_arr.empty?
     puts   "Nobody's birthday is within one week."
-      sleep 1
+      sleep 1.5
       system "clear"
     else
       send_massage(account,birthdays_arr)
       puts "remind mail has sent!!"
-      sleep 1
+      sleep 1.5
       system "clear"
     end
 end # def
